@@ -1,0 +1,9 @@
+<ng-container *ngFor="let post of posts$ | async">
+
+    <mat-card class="post-item">
+        <div style="font-weight: 600;"><mat-icon style="color: #141A5A"> message</mat-icon>{{post.title}}</div>
+        <div class="postName">
+            {{ post.body }}
+        </div>
+    </mat-card>
+</ng-container>

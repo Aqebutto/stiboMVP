@@ -1,0 +1,16 @@
+<ng-container *ngFor="let user of users$ | async">
+
+    <mat-card  class="user-item" (click)="toggleShowUser(user)">
+        <div class="userName" >
+            {{ user.name }}
+        </div>
+        <ng-container *ngIf="user.showUser">
+            <div style="margin-top:3%;"><mat-icon> email</mat-icon>{{ user.email }}</div>
+            <div><mat-icon> phone</mat-icon>{{user.phone}}</div>
+            <div><mat-icon> contacts</mat-icon>{{user.website}}</div>
+            <div style="margin-top:2%"><app-posts></app-posts></div>
+        </ng-container>
+
+    </mat-card>
+    
+</ng-container>
